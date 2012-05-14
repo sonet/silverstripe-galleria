@@ -16,7 +16,7 @@ class GalleriaImage extends DataObject
 		return new FieldSet(
 			new TextField('Caption','Caption'),
 			new TextField('Alt','Image Alt-Attribute (specifies an alternate text for the image)'),
-			new FileIFrameField('ImageFile', 'Image File', null, null, null, 'Homepage')
+			new FileIFrameField('ImageFile', 'Image File')
 		);
 	}
 
