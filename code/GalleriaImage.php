@@ -20,11 +20,6 @@ class GalleriaImage extends DataObject
 		);
 	}
 
-	public function onBeforeWrite() {
-		parent::onBeforeWrite();
-		$this->Locale = Translatable::get_current_locale();
-	}
-
 	public function getThumbSize() {
 		return $this->ImageFile()->SetRatioSize(40,40);
 	}
