@@ -57,11 +57,11 @@ class GalleriaPage_Controller extends Page_Controller {
 			}
 		');
 		Requirements::javascript('http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.js');
-		Requirements::javascript('galleria/thirdparty/galleria/galleria-1.2.7.min.js');
-		Requirements::javascript('galleria/thirdparty/galleria/themes/classic/galleria.classic.min.js');
+		Requirements::javascript('galleria/thirdparty/galleria/src/galleria.min.js');
+		Requirements::javascript('galleria/thirdparty/galleria/src/themes/classic/galleria.classic.min.js');
 		Requirements::customScript('
 			var data = [ ' . $this->getImageJson() . ' ];
-			Galleria.loadTheme(\'galleria/thirdparty/galleria/themes/classic/galleria.classic.min.js\');
+			Galleria.loadTheme(\'galleria/thirdparty/galleria/src/themes/classic/galleria.classic.min.js\');
 			Galleria.run(\'#galleria\', {
 				dataSource: data,
 				autoplay: 4500
