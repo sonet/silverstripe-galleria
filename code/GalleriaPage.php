@@ -41,8 +41,7 @@ class GalleriaPage extends Page {
 class GalleriaPage_Controller extends Page_Controller {
 
 	public static $allowed_actions = array(
-		'images',
-	 );
+	);
 
 	function init() {
 		parent::init();
@@ -51,8 +50,8 @@ class GalleriaPage_Controller extends Page_Controller {
 				height:698px
 			}
 			.galleria-container {
-			background-color: #F0F0F0;
-			border: 1px solid #E0E0E0
+				background-color: #F0F0F0;
+				border: 1px solid #E0E0E0
 			}
 		');
 		Requirements::javascript('http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.js');
@@ -71,7 +70,7 @@ class GalleriaPage_Controller extends Page_Controller {
 		$json = false;
 		if($images = $this->GalleriaImages()) {
 		foreach ($images as $image) {
-			$json.="{
+			$json .= "{
 			thumb:'{$image->getThumbSize()->URL}',
 			image:'{$image->getWebSize()->URL}',
 			big:'{$image->getFullSize()->URL}',
